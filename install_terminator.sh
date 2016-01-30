@@ -2,7 +2,7 @@
 
 ## Terminator
 
-sudo apt-get install -y python-keybinder terminator
+sudo apt-get install -y fonts-inconsolata python-keybinder terminator
   
 cd ~/.config
 

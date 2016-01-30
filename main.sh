@@ -9,4 +9,10 @@ echo "\tnumlocks -> done"
 
 ## Fish
 ./install_fish.sh
+
+## Lamp
+./install_lamp.sh
+
+## terminator
+./install_terminator.sh
  

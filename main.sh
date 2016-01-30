@@ -15,4 +15,7 @@ echo "\tnumlocks -> done"
 
 ## terminator
 ./install_terminator.sh
+
+## sublime
+./install_sublime.sh
  

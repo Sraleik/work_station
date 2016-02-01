@@ -19,3 +19,6 @@ echo "\tnumlocks -> done"
 ## sublime
 ./install_sublime.sh
  
+## swapiness
+./config_swapiness.sh
+ 

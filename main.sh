@@ -22,3 +22,11 @@ echo "\tnumlocks -> done"
 ## swapiness
 ./config_swapiness.sh
  
+## Finch
+./install_finch.sh
+
+## phpmyadmin
+./install_phpmyadmin.sh
+
+## rvm
+./install_rvm.sh

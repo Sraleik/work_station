@@ -19,6 +19,7 @@ git checkout ubuntu
 echo "easystroke config -> in ~/.config/fish"
 echo "setting ubuntu branch"
 
+echo "chsh pour la mise par défault"
 chsh -s `which fish` #to make fish default shell
 
 xmodmap -e "keycode 49 = Escape"

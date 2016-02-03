@@ -7,7 +7,10 @@ sudo apt-get update
 sudo apt-get install -y fish
 
 cd ~/.config
-rm -rf fish
+
+if [  -d fish ]; then
+	rm -rf fish
+fi
 
 echo "Retrieve fish config"
 git clone https://gitlab.com/Sraleik/fishConfig.git fish
@@ -20,7 +23,15 @@ chsh -s `which fish` #to make fish default shell
 
 xmodmap -e "keycode 49 = Escape"
 
-rm -f ~/.config/autostart/escape.desktop
+if [ ! -d ~/.config/autostart ]; then
+	mkdir ~/.config/autostart
+fi
+
+if [ -f ~/.config/autostart/escape.desktop ]; then
+	rm -f ~/.config/autostart/escape.desktop
+fi
+
+touch ~/.config/autostart/escape.desktop
 
 cat << EOF >> ~/.config/autostart/escape.desktop
 [Desktop Entry]

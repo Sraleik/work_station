@@ -14,6 +14,7 @@ echo "easystroke config -> in ~/.easystroke"
 
 echo "easystroke launch at start"
 rm -f ~/.config/autostart/easystroke.desktop
+touch ~/.config/autostart/easystroke.desktop
 
 cat << EOF >> ~/.config/autostart/easystroke.desktop
 [Desktop Entry]

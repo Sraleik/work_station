@@ -18,14 +18,14 @@ echo "\tnumlocks -> done"
 ## Fish
 ./install_fish.sh
 
-## terminator
+## Lamp
+./install_lamp.sh
+
+## terminator     NEED lamp car default = /var/www/html
 ./install_terminator.sh
 
 ## sublime
 ./install_sublime.sh
-
-## Lamp
-./install_lamp.sh
  
 ## Finch
 ./install_finch.sh

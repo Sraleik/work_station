@@ -1,16 +1,20 @@
 #!/bin/bash
+
 #sudo apt-get update
-#udo apt-get upgrade -y
+#sudo apt-get upgrade -y
 
 echo "Installation of numlockx"
-sudo apt-get install -y numlockx 
+sudo apt-get install -y numlockx
 echo "\tnumlocks -> done"
 
 ## swapiness
-./config_swapiness.sh
+#./config_swapiness.sh
 
 ## git
 ./config_git.sh
+
+# Chrome
+./install_chrome.sh
 
 ## Easystroke
 ./install_easystroke.sh
@@ -26,7 +30,7 @@ echo "\tnumlocks -> done"
 
 ## sublime
 ./install_sublime.sh
- 
+
 ## Finch
 ./install_finch.sh
 
@@ -34,4 +38,4 @@ echo "\tnumlocks -> done"
 ./install_phpmyadmin.sh
 
 ## rvm
-./install_rvm.sh
+#./install_rvm.sh

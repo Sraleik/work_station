@@ -44,7 +44,7 @@ NoDisplay=false
 Hidden=false
 Name[fr_FR]=escape
 Comment[fr_FR]=la touche mini 2 devient echap
-X-GNOME-Autostart-Delay=5
+X-GNOME-Autostart-Delay=30
 EOF
 
 

@@ -16,7 +16,7 @@ echo "Retrieve fish config"
 git clone https://gitlab.com/Sraleik/fishConfig.git fish
 cd fish 
 git checkout ubuntu
-echo "easystroke config -> in ~/.config/fish"
+echo "fish config -> in ~/.config/fish"
 echo "setting ubuntu branch"
 
 echo "chsh pour la mise par défault"

@@ -11,4 +11,4 @@ echo ""
 
 sudo adduser $user
 
-sudo adduser $user root
+sudo adduser $user sudo 

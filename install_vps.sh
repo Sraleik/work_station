@@ -3,12 +3,13 @@
 sudo apt-get update
 
 echo "upgrade?(y/n)"
-read user
+read upgrade 
 
 echo ""
 
-if [ "$upgrade" = "y" ]
+if [ "$upgrade" == "y" ]
 then
+  echo "upgrade ..."
   sudo apt-get upgrade -y
 fi
 
@@ -19,7 +20,7 @@ read swapiness
 
 echo ""
 
-if [ "$swapiness" = "y" ]
+if [ "$swapiness" == "y" ]
 then
   ./config_swapiness.sh
 fi
@@ -31,7 +32,7 @@ read setgit
 
 echo ""
 
-if [ "$setgit" = "y" ]
+if [ "$setgit" == "y" ]
 then
   ./config_git.sh
 fi
@@ -43,7 +44,7 @@ read install_fish
 
 echo ""
 
-if [ "$install_fish" = "y" ]
+if [ "$install_fish" == "y" ]
 then
   ./install_fish.sh
 fi
@@ -55,7 +56,7 @@ read install_docker
 
 echo ""
 
-if [ "$install_docker" = "y" ]
+if [ "$install_docker" == "y" ]
 then
   ./install_docker.sh
 fi

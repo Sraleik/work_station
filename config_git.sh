@@ -7,6 +7,13 @@ git config --global user.name "Sraleik"
 
 git config --global push.default simple
 
+npm_path=`which npm`
+
+if [ ${npm_path} = '' ]
+then
+  ./install_node
+fi
+
 sudo npm install -g diff-so-fancy
 
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"

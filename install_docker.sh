@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -fsSL https://test.docker.com/ | sh
+curl -fsSL https://get.docker.com/ | sh
 
 sudo groupadd docker
 sudo usermod -aG docker $USER 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+current_path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 ## Git
 
 git config --global user.email "nicolas.rotier@gmail.com"
@@ -7,11 +9,12 @@ git config --global user.name "Sraleik"
 
 git config --global push.default simple
 
-npm_path=`which npm`
+npm_path=`command -v npm`
 
-if [ ${npm_path} = '' ]
+if [ -z $npm_path ]
 then
-  ./install_node
+  cd $current_path
+  ./install_node.sh
 fi
 
 sudo npm install -g diff-so-fancy

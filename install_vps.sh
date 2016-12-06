@@ -47,3 +47,15 @@ if [ ${install_fish} = 'y' ]
 then
   ./install_fish.sh
 fi
+
+###### Docker
+
+echo "Install docker?(y/n)"
+read install_docker
+
+echo ""
+
+if [ ${install_docker} = 'y' ]
+then
+  ./install_docker.sh
+fi

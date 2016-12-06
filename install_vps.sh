@@ -24,7 +24,8 @@ then
   ./config_swapiness.sh
 fi
 
-## git
+###### git
+
 echo "Config git?(y/n)"
 read setgit
 
@@ -35,7 +36,7 @@ then
   ./config_git.sh
 fi
 
-## Fish
+###### Fish
 
 echo "Install fish?(y/n)"
 read install_fish

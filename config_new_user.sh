@@ -8,7 +8,17 @@ read user
 echo ""
 echo "======Creating user $user======"
 echo ""
-
 sudo adduser $user
 
-sudo adduser $user sudo 
+###### is root? 
+
+echo ""
+echo "Is root?(y/n)"
+read is_root 
+echo ""
+
+if [ "$is_root" == "y" ]
+then
+    sudo adduser $user sudo 
+fi
+

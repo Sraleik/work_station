@@ -21,4 +21,3 @@ if [ "$is_root" == "y" ]
 then
     sudo adduser $user sudo 
 fi
-

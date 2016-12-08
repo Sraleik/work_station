@@ -15,9 +15,8 @@ echo "-------------"
 echo "log as new user:"
 read new_user_name 
 
-sudo -u $new_user_name -H sh -c "whoami"
-#mkdir -p Documents
-#cd Documents
+sudo -u $new_user_name -H sh -c "cd ~ && mkdir -p Documents && cd Documents"
+sudo -u $new_user_name -H sh -c "pwd"
 
 echo "-------------"
 echo "update?(y/n)"

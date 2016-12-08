@@ -15,7 +15,7 @@ echo "-------------"
 echo "log as new user:"
 read new_user_name 
 
-sudo -u $new_user_name -H sh -c "pwd"
+sudo -u $new_user_name -H sh -c "whoami"
 #mkdir -p Documents
 #cd Documents
 
@@ -30,7 +30,6 @@ then
   echo "upgrade ..."
   sudo apt-get update
 fi
-
 
 echo "-------------"
 echo "upgrade?(y/n)"

@@ -2,7 +2,7 @@
 
 echo "-------------"
 echo "Create new user?(y/n)"
-read new_user 
+read new_user
 
 echo ""
 
@@ -13,14 +13,13 @@ fi
 
 echo "-------------"
 echo "log as new user:"
-read new_user_name 
+read new_user_name
 
-sudo -u $new_user_name -H sh -c "cd ~ && mkdir -p Documents && cd Documents"
-sudo -u $new_user_name -H sh -c "pwd"
+sudo -u $new_user_name -H sh -c "cd ~ && mkdir -p Documents"
 
 echo "-------------"
 echo "update?(y/n)"
-read update 
+read update
 
 echo ""
 
@@ -32,7 +31,7 @@ fi
 
 echo "-------------"
 echo "upgrade?(y/n)"
-read upgrade 
+read upgrade
 
 echo ""
 
@@ -65,8 +64,7 @@ echo ""
 
 if [ "$workstation" == "y" ]
 then
-  git clone https://gitlab.com/Sraleik/work_station.git
-  cd work_station
+  sudo -u $new_user_name -H sh -c "cd ~/Documents && git clone https://gitlab.com/Sraleik/work_station.git"
 fi
 
 
@@ -80,7 +78,7 @@ echo ""
 
 if [ "$setgit" == "y" ]
 then
-  ./config_git.sh
+  sudo -u $new_user_name -H sh -c "~/Documents/work_station/config_git.sh"
 fi
 
 
@@ -108,7 +106,7 @@ echo ""
 
 if [ "$install_fish" == "y" ]
 then
-  ./install_fish.sh
+  sudo -u $new_user_name -H sh -c "~/Documents/work_station/install_fish.sh"
 fi
 
 ###### Docker
@@ -121,5 +119,5 @@ echo ""
 
 if [ "$install_docker" == "y" ]
 then
-  ./install_docker.sh
+  sudo -u $new_user_name -H sh -c "~/Documents/work_station/install_docker.sh"
 fi

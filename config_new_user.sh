@@ -8,7 +8,7 @@ read user
 echo ""
 echo "======Creating user $user======"
 echo ""
-sudo adduser $user
+adduser $user
 
 ###### is root? 
 
@@ -19,5 +19,5 @@ echo ""
 
 if [ "$is_root" == "y" ]
 then
-    sudo adduser $user sudo 
+    adduser $user sudo 
 fi

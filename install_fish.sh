@@ -16,7 +16,7 @@ fi
 echo "Retrieve fish config"
 git clone https://gitlab.com/Sraleik/fishConfig.git fish
 cd fish
-git checkout ubuntu
+git checkout master
 echo "fish config -> in ~/.config/fish"
 echo "setting ubuntu branch"
 

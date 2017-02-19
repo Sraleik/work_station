@@ -51,7 +51,7 @@ echo ""
 
 if [ "$instalgit" == "y" ]
 then
-  sudo apt-get install git
+  sudo apt-get install git -y
 fi
 
 ###### git install

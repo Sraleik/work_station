@@ -20,6 +20,4 @@ if [ "$setnvim" == "y" ]
 then
   cd ~/.config
   git clone https://gitlab.com/Sraleik/nvimConfig.git nvim
-  cd nvim
-  git checkout v2
 fi

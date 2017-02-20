@@ -2,11 +2,11 @@
 
 ## Nvim
 
-sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo add-apt-repository ppa:neovim-ppa/unstable -y
 
 sudo apt-get update
 
-sudo apt-get install neovim
+sudo apt-get install neovim -y
 
 ###### nvim config
 

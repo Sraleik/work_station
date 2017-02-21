@@ -121,3 +121,29 @@ if [ "$install_docker" == "y" ]
 then
   sudo -u $new_user_name -H sh -c "~/Documents/work_station/install_docker.sh"
 fi
+
+###### The Fuck 
+
+echo "-------------"
+echo "Install thefuck?(y/n)"
+read install_thefuck
+
+echo ""
+
+if [ "$install_thefuck" == "y" ]
+then
+  sudo -u $new_user_name -H sh -c "~/Documents/work_station/install_finch.sh"
+fi
+
+###### Néovim 
+
+echo "-------------"
+echo "Install Nvim?(y/n)"
+read install_nvim
+
+echo ""
+
+if [ "$install_nvim" == "y" ]
+then
+  sudo -u $new_user_name -H sh -c "~/Documents/work_station/install_nvim.sh"
+fi

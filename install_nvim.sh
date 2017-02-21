@@ -19,5 +19,5 @@ echo ""
 if [ "$setnvim" == "y" ]
 then
   cd ~/.config
-  git clone https://gitlab.com/Sraleik/nvimConfig.git nvim
+  git clone https://gitlab.com/Sraleik/nvim_config.git nvim
 fi

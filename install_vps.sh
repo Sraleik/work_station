@@ -12,7 +12,7 @@ then
 fi
 
 echo "-------------"
-echo "log as new user:"
+echo "Log as new user:"
 read new_user_name
 
 sudo -u $new_user_name -H sh -c "cd ~ && mkdir -p Documents"
@@ -41,7 +41,7 @@ then
   sudo apt-get upgrade -y
 fi
 
-###### git install
+###### Git install
 
 echo "-------------"
 echo "Install git?(y/n)"
@@ -51,13 +51,13 @@ echo ""
 
 if [ "$instalgit" == "y" ]
 then
-  sudo apt-get install git -y
+  sudo -u $new_user_name -H sh -c "sudo apt-get install git -y"
 fi
 
 ###### Clone work_station
 
 echo "-------------"
-echo "clone work_station?(y/n)"
+echo "Clone work_station?(y/n)"
 read workstation
 
 echo ""
@@ -68,7 +68,7 @@ then
 fi
 
 
-###### git config
+###### Git config
 
 echo "-------------"
 echo "Config git?(y/n)"
@@ -82,17 +82,17 @@ then
 fi
 
 
-###### swapiness
+###### Swapiness
 
 echo "-------------"
-echo "swapiness?(y/n)"
+echo "Swapiness?(y/n)"
 read swapiness
 
 echo ""
 
 if [ "$swapiness" == "y" ]
 then
-  ./config_swapiness.sh
+  sudo -u $new_user_name -H sh -c "~/Documents/work_station/config_swapiness.sh"
 fi
 
 
@@ -132,7 +132,7 @@ echo ""
 
 if [ "$install_thefuck" == "y" ]
 then
-  sudo -u $new_user_name -H sh -c "~/Documents/work_station/install_finch.sh"
+  sudo -u $new_user_name -H sh -c "~/Documents/work_station/install_fuck.sh"
 fi
 
 ###### Nvim 

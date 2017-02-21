@@ -3,9 +3,7 @@ sudo apt update
 sudo apt install python3-dev python3-pip python3-setuptools build-essential
 sudo -H pip3 install thefuck
 
-install
-
-###### The Fuck 
+###### Alias fish 
 
 echo "-------------"
 echo "Config alias on fish?(y/n)"
@@ -18,3 +16,15 @@ then
   echo "eval (thefuck --alias fuck | tr '\n' ';')" >> ~/.config/fish/config.fish
 fi
 
+###### Alias bash (doesn't work yet)
+
+echo "-------------"
+echo "Config alias on bash?(y/n)"
+read alias_bash
+
+echo ""
+
+if [ "$alias_bash" == "y" ]
+then
+  echo "eval $(thefuck --alias)" >> ~/.bashrc
+fi

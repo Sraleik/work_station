@@ -78,7 +78,9 @@ echo ""
 
 if [ "$setgit" == "y" ]
 then
+  cd /home/$new_user_name
   sudo -u $new_user_name -H sh -c "~/Documents/work_station/config_git.sh"
+  cd -
 fi
 
 

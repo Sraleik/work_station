@@ -54,7 +54,7 @@ then
   sudo apt-get install git -y
 fi
 
-###### git install
+###### Clone work_station
 
 echo "-------------"
 echo "clone work_station?(y/n)"
@@ -135,7 +135,7 @@ then
   sudo -u $new_user_name -H sh -c "~/Documents/work_station/install_finch.sh"
 fi
 
-###### Néovim 
+###### Nvim 
 
 echo "-------------"
 echo "Install Nvim?(y/n)"

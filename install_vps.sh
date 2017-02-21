@@ -49,7 +49,7 @@ read installgit
 
 echo ""
 
-if [ "$instalgit" == "y" ]
+if [ "$installgit" == "y" ]
 then
   sudo -u $new_user_name -H sh -c "sudo apt-get install git -y"
 fi

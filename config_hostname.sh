@@ -26,3 +26,14 @@ old_hostname=`cat /etc/hostname.old`
 
 sudo cp /etc/hosts /etc/hosts.old
 sudo sed -i 's/'"$old_hostname"'&/'"$new_hostname"'/g' /etc/hosts 
+
+echo "------reboot is needed for change to take effect-------"
+echo "reboot?(y/n)"
+read reboot
+
+echo ""
+
+if [ "$reboot" == "y" ]
+then
+  sudo reboot
+fi

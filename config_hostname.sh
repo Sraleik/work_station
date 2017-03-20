@@ -8,8 +8,9 @@ echo ""
 
 if [ "$ovh_vps" == "y" ]
 then
+  sudo cp /etc/cloud/cloud.cfg /etc/cloud/cloud.cfg.old
   sudo sed -i 's/preserve_hostname: false/preserve_hostname: true/g' /etc/cloud/cloud.cfg
-  sudo echo "manage_etc_hosts" >> /etc/cloud/cloud.cfg
+  echo "manage_etc_hosts: false" | sudo tee --append /etc/cloud/cloud.cfg > /dev/null
 fi
 
 echo "-------------"
@@ -19,8 +20,9 @@ read new_hostname
 echo ""
 
 sudo cp /etc/hostname /etc/hostname.old
-sudo echo "$new_hostname" > /etc/hostname
+echo "$new_hostname" | sudo tee /etc/hostname > /dev/null
 
 old_hostname=`cat /etc/hostname.old`
 
-sudo sed -i 's/'"$old_hostname"'/'"$new_hostname"'/g' /etc/hosts 
+sudo cp /etc/hosts /etc/hosts.old
+sudo sed -i 's/'"$old_hostname"'&/'"$new_hostname"'/g' /etc/hosts 

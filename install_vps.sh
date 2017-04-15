@@ -149,3 +149,16 @@ if [ "$install_nvim" == "y" ]
 then
   sudo -u $new_user_name -H sh -c "~/Documents/work_station/install_nvim.sh"
 fi
+
+###### Hostname 
+
+echo "-------------"
+echo "Config Hostname?(y/n)"
+read config_Hostname
+
+echo ""
+
+if [ "$config_Hostname" == "y" ]
+then
+  sudo -u $new_user_name -H sh -c "~/Documents/work_station/config_hostname.sh"
+fi
